@@ -5,7 +5,7 @@ form.addEventListener('submit', async (e) => {
 
   const pseudo = encodeURIComponent(form.pseudo.value);
   const email = encodeURIComponent(form.email.value);
-  const webhookURL = `https://script.google.com/macros/s/AKfycbwSOuUGtfl5CygVmh1s7F_KouxMAIG317ZP96sADbEUQChzKUhxCaSDtMEXxKfynZdi/exec?pseudo=${pseudo}&email=${email}`;
+  const webhookURL = `https://script.google.com/macros/s/AKfycby9nWkSuaDTyN9YaPMtbmxkM-QdZ87z1kmqKofAYn9rQ0__TH83KMeo1tFAkacRc-dO/exec?pseudo=${pseudo}&email=${email}`;
 
   try {
     const res = await fetch(webhookURL);
