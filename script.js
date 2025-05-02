@@ -1,32 +1,25 @@
 // Pour le formulaire d'inscription aux newsletter
 const form = document.getElementById('inscription-form');
 form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = {
-    pseudo: form.pseudo.value,
-    email: form.email.value
-    };
+  e.preventDefault();
 
-    const webhookURL = 'https://script.google.com/macros/s/AKfycbwSOuUGtfl5CygVmh1s7F_KouxMAIG317ZP96sADbEUQChzKUhxCaSDtMEXxKfynZdi/exec';
+  const pseudo = encodeURIComponent(form.pseudo.value);
+  const email = encodeURIComponent(form.email.value);
+  const webhookURL = `https://script.google.com/macros/s/AKfycbwSOuUGtfl5CygVmh1s7F_KouxMAIG317ZP96sADbEUQChzKUhxCaSDtMEXxKfynZdi/exec?pseudo=${pseudo}&email=${email}`;
 
-    try {
-    const res = await fetch(webhookURL, {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: { 'Content-Type': 'application/json' }
-    });
+  try {
+    const res = await fetch(webhookURL);
     if (res.ok) {
-        alert("Inscription envoyée !");
-        form.reset();
+      alert("Inscription envoyée !");
+      form.reset();
     } else {
-        alert("Erreur lors de l'envoi !");
+      alert("Erreur lors de l'envoi !");
     }
-    } catch (err) {
+  } catch (err) {
     console.error(err);
     alert("Erreur réseau");
-    }
+  }
 });
-
 
 // Pour l'animation aux scolls
 const ignoredTags = ['SCRIPT', 'STYLE', 'LINK', 'META', 'HEAD', 'TITLE'];
