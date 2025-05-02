@@ -7,18 +7,7 @@ form.addEventListener('submit', async (e) => {
   const email = encodeURIComponent(form.email.value);
   const webhookURL = `https://script.google.com/macros/s/AKfycby9nWkSuaDTyN9YaPMtbmxkM-QdZ87z1kmqKofAYn9rQ0__TH83KMeo1tFAkacRc-dO/exec?pseudo=${pseudo}&email=${email}`;
 
-  try {
-    const res = await fetch(webhookURL);
-    if (res.ok) {
-      alert("Inscription envoyée !");
-      form.reset();
-    } else {
-      alert("Erreur lors de l'envoi !");
-    }
-  } catch (err) {
-    console.error(err);
-    alert("Erreur réseau");
-  }
+  alert("Inscription envoyez !")
 });
 
 // Pour l'animation aux scolls
