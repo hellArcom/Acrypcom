@@ -1,15 +1,3 @@
-// Pour le formulaire d'inscription aux newsletter
-const form = document.getElementById('inscription-form');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const pseudo = encodeURIComponent(form.pseudo.value);
-  const email = encodeURIComponent(form.email.value);
-  const webhookURL = `https://script.google.com/macros/s/AKfycby9nWkSuaDTyN9YaPMtbmxkM-QdZ87z1kmqKofAYn9rQ0__TH83KMeo1tFAkacRc-dO/exec?pseudo=${pseudo}&email=${email}`;
-
-  alert("Inscription envoyez !")
-});
-
 // Pour l'animation aux scolls
 const ignoredTags = ['SCRIPT', 'STYLE', 'LINK', 'META', 'HEAD', 'TITLE'];
 
