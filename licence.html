@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acrypcom - Licence</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="img/favicon.png" type="image/png" />
+  <script>
+    function changeLanguage(lang) {
+      const translations = {
+        fr: {
+          title: "Licence : Acrypcom Public License (APL) v1.0",
+          copyright: "Copyright © 2025 Arcom",
+          objective: "Objectif :",
+          objectiveDesc: "Favoriser l’apprentissage et la transparence du code tout en interdisant l’exploitation commerciale sans autorisation.",
+          rights: "Vous avez le droit de :",
+          rightsList: [
+            "Lire, étudier, et modifier le code pour un usage personnel et non lucratif",
+            "Forker le projet à des fins éducatives ou expérimentales",
+            "Contribuer ou proposer des améliorations (pull request, idées, etc.)"
+          ],
+          noRights: "Vous n’avez pas le droit de :",
+          noRightsList: [
+            "Vendre, louer ou monétiser ce code ou des dérivés",
+            "L’utiliser dans un service ou produit payant",
+            "L’utiliser pour générer un revenu direct ou indirect"
+          ],
+          commercialRights: "Seul le titulaire de cette licence détient les droits commerciaux",
+          contactInfo: "Pour toute demande d’exception, d’usage commercial ou de partenariat, veuillez contacter directement l’auteur du projet par les moyens de contact indiqués dans celui-ci.",
+          violation: "Toute violation de cette licence pourra entraîner des poursuites judiciaires."
+        },
+        en: {
+          title: "License: Acrypcom Public License (APL) v1.0",
+          copyright: "Copyright © 2025 Arcom",
+          objective: "Objective:",
+          objectiveDesc: "Promote learning and code transparency while preventing commercial exploitation without permission.",
+          rights: "You have the right to:",
+          rightsList: [
+            "Read, study, and modify the code for personal and non-profit use",
+            "Fork the project for educational or experimental purposes",
+            "Contribute or propose improvements (pull request, ideas, etc.)"
+          ],
+          noRights: "You do not have the right to:",
+          noRightsList: [
+            "Sell, rent, or monetize this code or derivatives",
+            "Use it in a paid service or product",
+            "Use it to generate direct or indirect revenue"
+          ],
+          commercialRights: "Only the license holder has commercial rights",
+          contactInfo: "For any exceptions, commercial use, or partnership requests, please contact the project author through the contact information provided in the project.",
+          violation: "Any violation of this license may result in legal action."
+        }
+      };
+
+      // Change the text based on the selected language
+      document.getElementById('title').textContent = translations[lang].title;
+      document.getElementById('copyright').textContent = translations[lang].copyright;
+      document.getElementById('objective').textContent = translations[lang].objective;
+      document.getElementById('objectiveDesc').textContent = translations[lang].objectiveDesc;
+      document.getElementById('rights').textContent = translations[lang].rights;
+      document.getElementById('rightsList').innerHTML = translations[lang].rightsList.map(item => `<li>${item}</li>`).join('');
+      document.getElementById('noRights').textContent = translations[lang].noRights;
+      document.getElementById('noRightsList').innerHTML = translations[lang].noRightsList.map(item => `<li>${item}</li>`).join('');
+      document.getElementById('commercialRights').textContent = translations[lang].commercialRights;
+      document.getElementById('contactInfo').textContent = translations[lang].contactInfo;
+      document.getElementById('violation').textContent = translations[lang].violation;
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Acrypcom</div>
+      <ul class="nav-menu">
+        <li><a href="credits.html">Crédits</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li>
+          <select onchange="changeLanguage(this.value)">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="container">
+      <h2 id="title">Licence : Acrypcom Public License (APL) v1.0</h2>
+      <p>
+        <span id="copyright">Copyright © 2025 Arcom</span>
+        <br><br>
+        <strong id="objective">Objectif :</strong><br>
+        <span id="objectiveDesc">Favoriser l’apprentissage et la transparence du code tout en interdisant l’exploitation commerciale sans autorisation.</span>
+        <br><br>
+        
+        <strong id="rights">Vous avez le droit de :</strong><br>
+        <ul id="rightsList">
+          <li>Lire, étudier, et modifier le code pour un usage personnel et non lucratif</li>
+          <li>Forker le projet à des fins éducatives ou expérimentales</li>
+          <li>Contribuer ou proposer des améliorations (pull request, idées, etc.)</li>
+        </ul>
+        
+        <br><br>
+        <strong id="noRights">Vous n’avez pas le droit de :</strong><br>
+        <ul id="noRightsList">
+          <li>Vendre, louer ou monétiser ce code ou des dérivés</li>
+          <li>L’utiliser dans un service ou produit payant</li>
+          <li>L’utiliser pour générer un revenu direct ou indirect</li>
+        </ul>
+        
+        <br><br>
+        <strong id="commercialRights">Seul le titulaire de cette licence détient les droits commerciaux</strong> sur tout projet utilisant la APL (Acrypcom Public License).
+        <br><br>
+        <span id="contactInfo">Pour toute demande d’exception, d’usage commercial ou de partenariat, veuillez contacter directement l’auteur du projet par les moyens de contact indiqués dans celui-ci.</span>
+        <br><br>
+        <span id="violation">Toute violation de cette licence pourra entraîner des poursuites judiciaires.</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container text-secondary" style="text-align: center; padding: 1em 0;">
+      <p>&copy; 2025 Acrypcom.</p>
+      <a href="index.html" style="color: inherit; text-decoration: underline;">Page principale</a>
+    </div>
+  </footer>
+</body>
+</html>
