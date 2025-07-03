@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acrypcom - Inscription Newsletter</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <style>
+        :root {
+            --primary-color: #00FFFF;
+            --secondary-color: #000000;
+            --accent-dark-gray: #333333;
+            --accent-dark-cyan: #007B7B;
+            --text-primary: #FFFFFF;
+            --text-secondary: #D3D3D3;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        h1 {
+            color: var(--primary-color);
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+        }
+        p {
+            color: var(--text-secondary);
+            text-align: center;
+            max-width: 600px;
+        }
+        form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1em;
+            max-width: 500px;
+            margin-top: 2em;
+            padding: 1.5em;
+            background-color: rgba(0, 123, 123, 0.2);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 170, 170, 0.2);
+        }
+        input {
+            flex-grow: 1;
+            min-width: 180px;
+            padding: 10px;
+            border: 1px solid var(--accent-dark-cyan);
+            border-radius: 4px;
+            background-color: #222;
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+        }
+        input::placeholder {
+            color: var(--text-secondary);
+        }
+        input:hover, input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 5px var(--primary-color);
+        }
+        button {
+            padding: 0.8em 1.5em;
+            border: 1px solid var(--accent-dark-cyan);
+            background-color: var(--accent-dark-gray);
+            color: var(--text-primary);
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: var(--accent-dark-cyan);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        footer {
+            margin-top: 2em;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+        a {
+            color: var(--primary-color);
+        }
+        a:hover {
+            text-shadow: 0 0 8px var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <h1>Restez informé !</h1>
+    <p>Inscrivez votre email pour être prévenu lors de la sortie officielle d'Acrypcom. Pas de spam, juste des news importantes.</p>
+
+    <form action="https://arcom.pythonanywhere.com/newsletter" method="post">
+        <input type="email" name="email" placeholder="Votre email" required>
+        <button type="submit">S'inscrire</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Acrypcom. <a href="https://hellarcom.github.io/Acrypcom/">Retour à l'accueil</a></p>
+    </footer>
+</body>
+</html>
